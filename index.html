@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="./reset.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./styles.css">
+   <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+   <title>JS RegExp</title>
+</head>
+<body>
+   <section class="contactForm">
+      <h1 class="formHeader">
+      Contact form
+      </h1>
+      <p class="formHelper">
+         Please fill in your information and we'll be sending your order.
+      </p>
+      <form action="#" id="form">
+         <label class="flex three-elements">
+            <span class="one-third" >Your name</span>
+            <input class="two-third" type="text" name="first-name" placeholder="first name" autofocus pattern="[A-Z]\w{2,15}">
+            <input class="two-third" type="text" name="last-name" placeholder="last name" pattern="[A-Z]\w{2,15}">
+         </label>
+         <label class="flex">
+            <span class="one-third">Your email</span>
+            <input class="two-third" type="email" name="email" placeholder="your_email@mail.com">
+         </label>
+         <label class="flex">
+            <span class="one-third">Phone *</span>
+            <input class="two-third" type="tel" name="tel" placeholder="0991234567" required pattern="\d{10}">
+         </label>
+         <label class="flex">
+            <span class="one-third">Message subject *</span>
+            <select class="two-third" name="message-subjects" required>
+               <option value="Other">Other</option>
+               <option value="Report">Report</option>
+               <option value="Request">Request</option>
+            </select>
+         </label>
+         <label class="flex">
+            <span class="one-third">Message *</span>
+            <textarea class="two-third" name="message" required minlength="4" rows="4" pattern=""></textarea>
+            <!-- проверка на пробелы -->
+         </label>
+         <hr>
+         <div class="flex">
+            <span class="one-third"></span>
+            <button class="two-third" type="submit">SUBMIT FORM</button>
+         </div>
+      </form>
+   </section>
+
+   <script src="./javascript.js"></script>
+</body>
+</html>
+
